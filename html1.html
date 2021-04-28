@@ -10,5 +10,178 @@
     这是一个段落，我测试下段落的颜色和左外边距
 </p>
 <p style="font-family:'Monotype Corsiva';font-size: 30px">这是字体样式和大小</p>
+
+<h1 style="text-align: center">居中对齐的标题</h1>
+<p>这是一个段落</p>
+
+
+<p>这里是图片,alt属性是图片加载不出来显示的文字内容</p>
+<img src="http://www.runoob.com/images/pulpit.jpg" alt="sfdsafsdf">
+
+<!--图片混排列-->
+<p>图片和<img src="../images/smiley.gif" alt="Smiley face" width="50px" height="50px">文字混合排列</p>
+<br>
+<p><img src="images/smiley.gif" alt="动图" style="float: left">一个带图片的段落，图片浮动在这个文本的左边。</p>
+<br>
+<p><img src="images/smiley.gif" alt="动图" style="float: right">一个带图片的段落，图片浮动在这个文本的右边。</p>
+<br><br><br><br>
+<!--表格-->
+<table>
+    <tr>
+        <td>
+            row1,cell1
+        </td>
+        <td>
+            row1,cell2
+        </td>
+        <td>
+            row1,cell3
+        </td>
+    </tr>
+    <tr>
+        <td>
+            row2,cell1
+        </td>
+        <td>
+            row2,cell2
+        </td>
+        <td>
+            row2,cell3
+        </td>
+    </tr>
+</table>
+<!--表格2 带表头-->
+<table border="1px">
+    <tr>
+        <th>header1</th>
+        <th>header2</th>
+    </tr>
+    <tr>
+        <td>row1 cell1</td>
+        <td>row1 cell2</td>
+    </tr>
+    <tr>
+        <td>row2 cell1</td>
+        <td>row2 cell2</td>
+    </tr>
+</table>
+<br><br><br><br><br>
+<!--表格3 带标题-->
+<table>
+    <caption>这是表格的标题</caption>
+    <tr>
+        <th>Month</th>
+        <th>Savings</th>
+    </tr>
+    <tr>
+        <td>January</td>
+        <td>$100</td>
+    </tr>
+    <tr>
+        <td>February</td>
+        <td>$50</td>
+    </tr>
+</table>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<h4>单元格跨两行:</h4>
+<table border="1">
+    <tr>
+        <th>First Name:</th>
+        <td>Bill Gates</td>
+    </tr>
+    <tr>
+        <th rowspan="3">Telephone:</th>
+        <td>555 77 854</td>
+    </tr>
+    <tr>
+        <td>555 77 855</td>
+    </tr>
+    <tr>
+        <td>555 77 855</td>
+    </tr>
+</table>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<h4>单元格跨两列:</h4>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th colspan="2">Telephone</th>
+    </tr>
+    <tr>
+        <td>Bill Gates</td>
+        <td>555 77 854</td>
+        <td>555 77 855</td>
+    </tr>
+</table>
+
+<--表格内嵌套标签-->
+<table border="1px">
+    <tr>
+        <td>
+            <p>这是段落1</p>
+            <p>这是段落2</p>
+        </td>
+        <td>
+            这是一个单元表格
+            <table border="1">
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>D</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            这是一个列表元素
+            <ul>
+                <li>apples</li>
+                <li>bananas</li>
+                <li>pineapples</li>
+            </ul>
+        </td>
+        <td>
+            hello world
+        </td>
+    </tr>
+</table>
+<br><br><br><br>
+
+<h4>有单元格边距:</h4>
+<table border="1" cellpadding="10">
+    <tr>
+        <td>
+            fisrt
+        </td>
+        <td>
+           row
+        </td>
+    </tr>
+    <tr>
+        <td>
+           second
+        </td>
+        <td>
+            row
+        </td>
+    </tr>
+</table>
+
+<h1>漂亮的表格</h1>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr>
+        <td align="center" class="biaoti" height="60">受理员业务统计表</td>
+    </tr>
+    <tr>
+        <td align="right" height="25">2017-01-02---2017-05-02</td>
+    </tr>
+</table>
 </body>
 </html>

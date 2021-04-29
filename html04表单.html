@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--单选按钮-->
+<form action="">
+    <input type="radio" name="sex" value="male">男
+    <input type="radio" name="sex" value="female">女
+</form>
+<!--复选按钮-->
+<form action="">
+    <input type="checkbox" name="vehicle" value="bike">我有一辆自行车<br>
+    <input type="checkbox" name="vehicle" value="car">我有一辆汽车
+</form>
+<!--简单的下拉列表-->
+<form action="">
+    <select name="cars">
+        <option value="baoma">宝马</option>
+        <option value="dazhong">大众</option>
+        <option value="falali">法拉利</option>
+        <option value="qirui">奇瑞</option>
+        <option value="fengtian">丰田</option>
+        <option value="bentian">本田</option>
+    </select>
+</form>
+<!--预选值得下拉列表-->
+<form action="">
+    <select name="cars">
+        <option value="baoma">宝马</option>
+        <option value="dazhong">大众</option>
+        <option value="falali">法拉利</option>
+        <option value="qirui" selected>奇瑞</option>
+        <option value="fengtian">丰田</option>
+        <option value="bentian">本田</option>
+    </select>
+</form>
+<!--文本域-->
+<textarea rows="10" cols="30">
+    我是一个多行文本输入框
+</textarea>
+<!--按钮-->
+<form action="">
+    <input type="button" value="helloworld">
+</form>
+<!--带边框的表单 fieldset为表单分组 lengd为组添加标题-->
+<form>
+    <fieldset>
+        <legend>Personal information</legend>
+        Name:<input type="text" size="30"><br>
+        E-mail:<input type="text" size="30"><br>
+        Date of birthday:<input type="text" size="30">
+    </fieldset>
+</form>
+<!--带输入框和提交按钮的表单-->
+<form action="demo-form.php">
+    First name:<input type="text" name="first name" value="Mickey"><br>
+    Last name:<input type="text" name="last name" value="Mouse"><br>
+    <input type="submit" value="提交"><br>
+</form>
+
+<!--带复选和提交按钮的表单-->
+<form action="demo-form.php">
+    <input type="checkbox" name="vehicle[]" value="bike">我有一辆自行车<br>
+    <input type="checkbox" name="vehicle[]" value="car" checked="checked">我有一辆汽车<br>
+    <input type="submit" value="提交"><br>
+</form>
+
+<!--单选按钮和提交按钮-->
+<form action="">
+    <input type="radio" name="sex" value="male">男<br>
+    <input type="radio" name="sex" value="female" checked>女<br>
+    <input type="submit" value="提交"><br>
+</form>
+
+<!--发送邮件到-->
+<form action="MAILTO：275541894@qq.com" method="post" enctype="text/plain">
+    Name:<br>
+    <input type="text" name="username" value="姓名"><br>
+    E-Mail:<br>
+    <input type="email" name="mail" value="邮箱">
+     Comment:<br>
+    <input type="text" name="comment" value="请填写你的评论" size="50"><br>
+    <input type="submit" value="提交"><br>
+    <input type="reset" value="重置"><br>
+</form>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--接入百度地图api-->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=HbKRVyYB3oYr3rb7ld2pmOCih55kx5Oh">
+    </script>
+</head>
+<body>
+<p id="demo">点击按钮获取您当前坐标（可能需要比较长的时间获取）：</p>
+<button onclick="getLocation()">点我
+</button>
+<div id="mapholder"></div>
+<script>
+    var x=document.getElementById("demo")
+
+    function getLocation() {
+        // 创建百度地理位置实例，代替
+        // navigator.geolocation
+        var geolocation = new BMap.Geolocation();
+        geolocation.getCurrentPosition(showPosition,showError);
+    }
+
+    function showPosition(e)
+    {
+        var latlon=e.point.lng+","+e.point.lat;
+        var img_url="http://api.map.baidu.com/staticimage/v2?ak=HbKRVyYB3oYr3rb7ld2pmOCih55kx5Oh&mcode=666666&center="+latlon+"&width=300&height=200&zoom=11"
+        document.getElementById("mapholder").innerHTML="<img src='"+img_url+"'>";
+
+        x.innerHTML="纬度: " + e.point.lat +
+            "<br>经度: " + e.point.lng;
+    }
+
+    function showError(error)
+    {
+        switch(error.code)
+        {
+            case error.PERMISSION_DENIED:
+                x.innerHTML="用户拒绝对获取地理位置的请求。"
+                break;
+            case error.POSITION_UNAVAILABLE:
+                x.innerHTML="位置信息是不可用的。"
+                break;
+            case error.TIMEOUT:
+                x.innerHTML="请求用户地理位置超时。"
+                break;
+            case error.UNKNOWN_ERROR:
+                x.innerHTML="未知错误。"
+                break;
+        }
+    }
+</script>
+
+
+
+<br><br><br>
+<p id="demo1">点击按钮获取您当前坐标（可能需要比较长的时间获取）：</p>
+<button onclick="getLocation1()">点我</button>
+<script>
+    var x1=document.getElementById("demo1");
+    function getLocation1()
+    {
+        if (navigator.geolocation)
+        {
+            navigator.geolocation.watchPosition(showPosition1,showError1);
+        }
+        else
+        {
+            x1.innerHTML="该浏览器不支持定位。";
+        }
+    }
+    function showPosition1(position)
+    {
+        x1.innerHTML="纬度: " + position.coords.latitude +
+            "<br>经度: " + position.coords.longitude;
+    }
+    function showError1(error)
+    {
+        switch(error.code)
+        {
+            case error.PERMISSION_DENIED:
+                x1.innerHTML="用户拒绝对获取地理位置的请求。"
+                break;
+            case error.POSITION_UNAVAILABLE:
+                x1.innerHTML="位置信息是不可用的。"
+                break;
+            case error.TIMEOUT:
+                x1.innerHTML="请求用户地理位置超时。"
+                break;
+            case error.UNKNOWN_ERROR:
+                x1.innerHTML="未知错误。"
+                break;
+        }
+    }
+</script>
+</body>
+</html>

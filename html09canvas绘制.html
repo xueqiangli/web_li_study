@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--创建一个画布-->
+<canvas id="myCanvas" width="200" height="100" style="border: 1px solid #000000;">
+</canvas><br>
+<!--创建一个画布-->
+<canvas id="myCanvas2" width="200" height="100" style="border: 1px solid #000000;"></canvas><br>
+<canvas id="myCanvas3" width="200" height="100" style="border: 1px solid #000000;"></canvas><br>
+<canvas id="myCanvas4" width="200" height="100" style="border: 1px solid #000000;"></canvas><br>
+
+<!--绘制矩形-->
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.fillStyle = "#FF0000";
+    ctx.fillRect(0, 0, 150, 75);
+</script>
+<!--绘制线-->
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0, 0);
+    ctx.lineTo(200, 100);
+    ctx.stroke();
+</script>
+<!--绘制圆形-->
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+    ctx.stroke();
+</script>
+<!--绘制实心文本 设置字体大小和颜色-->
+<script>
+    var c=document.getElementById("myCanvas")
+    var ctx=c.getContext("2d")
+    ctx.font="30px 微软雅黑"
+    ctx.fillStyle="#000"
+    ctx.fillText("hello world",10,50)
+</script>
+
+<!--绘制空心文本 设置字体大小和颜色-->
+<script>
+    var c=document.getElementById("myCanvas2")
+    var ctx=c.getContext("2d")
+    ctx.font="30px 微软雅黑"
+    ctx.fillStyle="#000"
+    ctx.strokeText("hello world",10,50)
+</script>
+<!--颜色线性渐变-->
+<script>
+    var c=document.getElementById("myCanvas3")
+    var ctx=c.getContext("2d")
+
+    //创建渐变
+    var grd=ctx.createLinearGradient(0,0,200,0)
+    grd.addColorStop(0,"red")
+    grd.addColorStop("1","white")
+
+    //填充渐变
+    ctx.fillStyle=grd
+    ctx.fillRect(10,10,150,80)
+</script>
+<!--颜色径向渐变-->
+<script>
+    var c=document.getElementById("myCanvas4")
+    var ctx=c.getContext("2d")
+
+    //创建渐变
+    var grd=ctx.createRadialGradient(75,50,5,90,60,100)
+    grd.addColorStop(0,"red")
+    grd.addColorStop("1","white")
+
+    //填充渐变
+    ctx.fillStyle=grd
+    ctx.fillRect(10,10,150,80)
+</script>
+<!--在画布上放一张图片-->
+<p>Image to use:</p>
+<img id="scream" src="images/women.png" alt="The Scream" width="220" height="277">
+<p>Canvas:</p><br>
+
+<canvas id="myCanvas5" width="200" height="100" style="border: 1px solid #000000;"></canvas><br>
+<script>
+    var c=document.getElementById("myCanvas5")
+    var ctx=c.getContext("2d")
+
+    var img=document.getElementById("scream");
+
+    img.onload = function() {
+        ctx.drawImage(img,10,10);
+    }
+</script>
+</body>
+</html>

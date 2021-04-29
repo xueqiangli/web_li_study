@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    document.write("hello world")
+</script>
+<h1>我的第一个javascrip</h1>
+<p id="test">点击下面按钮，可以修改我当前显示的问题</p>
+<script>
+    function myFun() {
+        document.getElementById("test").innerHTML="看我，文字修改了吧";
+    }
+</script>
+
+<script>
+    function myFun2() {
+        document.getElementById("test").style.color="#ff0000"
+    }
+</script>
+
+<button type="button1" onclick="myFun()">点我</button>
+<button type="button" onclick="myFun2()">修改颜色</button>
+</body>
+</html>

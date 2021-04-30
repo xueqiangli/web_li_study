@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--HTML5 <datalist> 元素-->
+<form action="demo-form.php" method="get">
+    <input list="browsers" name="brower">
+    <datalist id="browsers">
+        <option>Internet Explorer</option>
+        <option>Firefox</option>
+        <option>Chrome</option>
+        <option>Opera</option>
+        <option>Safari</option>
+        <option>Edge</option>
+    </datalist>
+    <input type="submit">
+</form>
+<!--HTML5 <keygen> 元素-->
+<form action="demo_keygen.asp" method="get">
+    用户名：<input type="text" name="user_name">
+    <keygen name="security"></keygen>
+    <input type="submit">
+</form>
+
+<!--HTML5 <output> 元素-->
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+    0<input type="range" id="a" value="50">100
+    +<input type="text" id="b" value="50">
+    =<output name="x" for="a b"></output>
+</form>
+
+<form action="demo-form.php" novalidate>
+    E-mail: <input type="email" name="user_email">
+    <input type="submit">
+</form>
+</body>
+</html>

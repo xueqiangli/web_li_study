@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<--自动完成属性-->
+<form action="demo-form.php" autocomplete="on">
+    First name:<input type="text" name="fname"><br>
+    Last name: <input type="text" name="lname"><br>
+    E-mail: <input type="email" name="email" autocomplete="off"><br>
+    <input type="submit">
+</form>
+
+<br><br><br><br><br><br>
+<!--不做检验-->
+<form action="" novalidate>
+    E-mail:<input type="email" name="user_email">
+    <input type="submit">
+</form>
+<br><br><br><br><br><br>
+<!--域自动获得焦点-->
+<form action="demo-form.php">
+    First name: <input type="text" name="fname" autofocus><br>
+    Last name: <input type="text" name="lname"><br>
+    <input type="submit">
+</form>
+<br><br><br><br><br><br>
+<!--form外头的input引入表单之内-->
+<form action="demo-form.php" id="form1">
+    First name: <input type="text" name="fname"><br>
+    <input type="submit" value="提交">
+</form>
+
+Last name: <input type="text" name="lname" required form="form1">
+
+<br><br><br><br><br><br>
+<!-- formaction 属性会覆盖<form> 元素中的action属性.-->
+<form action="demo-form.php">
+    First name: <input type="text" name="fname"><br>
+    Last name: <input type="text" name="lname"><br>
+    <input type="submit" value="提交"><br>
+    <input type="submit" formaction="demo-admin.php" value="提交">
+</form>
+<br><br><br><br><br><br>
+<!-- formenctype设置提交服务器的数据编码.-->
+<form action="demo-post_enctype.php" method="post">
+    First name: <input type="text" name="fname"><br>
+    <input type="submit" value="提交">
+    <input type="submit" formenctype="multipart/form-data"
+           value="以 Multipart/form-data 提交">
+</form>
+<br><br><br><br><br><br>
+<!-- formmethod定义表单提交的方式.-->
+<form action="demo-form.php" method="get">
+    First name:<input type="text" name="first_name"><br>
+    Last name:<input type="text" name="last_name"><br>
+    <input type="submit">
+    <input type="submit" value="提交" formmethod="post" formaction="demo-post.php">
+</form>
+<br><br><br><br><br><br>
+<!-- formnovalidate 与type=submit一起使用.-->
+<form action="demo-form.php" method="get">
+    First name:<input type="text" name="first_name" required><br>
+    Last name:<input type="text" name="last_name"><br>
+    <input type="submit" value="不验证提交" formnovalidate>
+</form>
+
+<br><br><br><br><br><br>
+<!-- formtarget 属性提交之后跳转新的界面.-->
+<form action="demo-form.php" method="get">
+    First name:<input type="text" name="first_name"><br>
+    Last name:<input type="text" name="last_name"><br>
+    <input type="submit" value="正常提交">
+    <input type="submit" value="提交到一个新的界面" formtarget="_blank">
+</form>
+
+<br><br><br><br><br><br>
+<!-- height 和 width 属性用于 type="image".-->
+<form action="demo-form.php" method="get">
+    First name:<input type="text" name="first_name"><br>
+    Last name:<input type="text" name="last_name"><br>
+    请选择图片:<input type="image" src="images/wome.png" alt="这是一个美女图片，很美" lwidth="200" height="100">
+</form>
+
+<br><br><br><br><br><br>
+<!-- multiple可以选择多张图片.-->
+<form action="demo-form.php" method="get">
+    请选择图片:<input type="file" name="img" multiple><br>
+    <input type="submit">
+</form>
+
+<br><br><br><br><br><br>
+<!-- pattern正则表达式的属性.-->
+<form action="demo-form.php">
+    Country code: <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
+    <input type="submit">
+</form>
+
+<br><br><br><br><br><br>
+<!-- placeholder相当于安卓hint提示.-->
+<form action="demo-form.php">
+    <input type="text" name="fname" placeholder="First name"><br>
+    <input type="text" name="lname" placeholder="Last name"><br>
+    <input type="submit" value="提交">
+</form>
+
+<br><br><br><br><br><br>
+<!--step 属性和type="number"一起用.-->
+<form action="demo-form.php">
+    <input type="number" name="points" step="3">
+    <input type="submit">
+</form>
+</body>
+</html>

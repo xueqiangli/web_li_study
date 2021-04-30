@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="result"></div>
+<script>
+    if (typeof(Storage) !== "undefined") {
+        //存储数据
+        localStorage.sitename = "菜鸟教程";
+        localStorage.removeItem("sitename");
+        //获取数据
+        document.getElementById("result").innerHTML = "网站名：" + localStorage.sitename;
+    }
+    else {
+        document.getElementById("result").innerHTML = "对不起，您的浏览器不支持 web 存储。";
+    }
+</script>
+<br><br><br><br><br><br>
+<p1>简单的网站列表程序</p1>
+<div style="border: 2px dashed #ccc;width:320px;text-align: center">
+    <label for="sitename">网站名(key)</label>
+    <input type="text" id="sitename" name="sitename" class="text">
+    <br>
+    <label for="siteurl">网址(value)</label>
+    <input type="text" id="siteurl" name="siteurl" class="text">
+    <br>
+    <input type="button" onclick="onSave()" value="新增记录">
+    <hr>
+    <label for="search_site">输入网站名：</label>
+    <input type="text" id="search_site" name="search_site" placeholder="请输入网站中文名">
+    <input type="button" onclick="findSite()" value="查找网站">
+    <p id="search_result"><br></p>
+
+</div>
+<div id="list"></div>
+
+<script>
+    // 载入所有存储在localStorage的数据
+    loadAll();
+
+    //数据保存
+    function onSave() {
+        var sitename = document.getElementById("sitename").value;
+        var siteurl = document.getElementById("siteurl").value;
+        localStorage.setItem(sitename, siteurl)
+        alert("添加成功")
+        loadAll()
+    }
+
+    //查找网站
+    function findSite() {
+        var searchSite = document.getElementById("search_site").value;
+        var site = localStorage.getItem(searchSite)
+        var searchResult = document.getElementById("search_result")
+        searchResult.innerHTML = searchSite + "的网址是：" + site
+    }
+
+    //查找所有数据
+    function loadAll() {
+        var list = document.getElementById("list")
+        if (localStorage.length > 0) {
+            var result = "<table border='1'>";
+            result += "<tr><td>key</td><td>value</td><td>操作</td></tr>";
+            for (var i = 0; i < localStorage.length; i++) {
+                var sitename = localStorage.key(i);
+                var siteurl = localStorage.getItem(sitename);
+                result += "<tr><td>"
+                    + sitename +
+                    "</td><td>" + siteurl
+                    + "</td><td>"
+                    + "<input type=button value=删除 onclick=del(" + "'" + sitename + "'" + ")>"
+                    + "</td></tr>";
+            }
+            result += "</table>";
+            list.innerHTML = result;
+        } else {
+            list.innerHTML = "数据为空……";
+        }
+    }
+
+    function del(name) {
+        localStorage.removeItem(name)
+        alert("删除成功")
+        loadAll()
+    }
+</script>
+</body>
+</html>

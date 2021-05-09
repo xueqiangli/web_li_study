@@ -16,7 +16,7 @@
     <!--字符间距-->
     <style>
         h1 {
-            letter-spacing: 2px;
+            letter-spacing: 20px;
         }
 
         h2 {
@@ -36,13 +36,30 @@
     <!--增加单词之间的间距-->
     <!--禁用文字环绕-->
     <style>
-        p {
-            word-spacing: 30px;
+        p.wordsp {
+            word-spacing: 160px;
+        }
 
+        p.whites {
             white-space: nowrap;
         }
     </style>
+    <!--垂直对齐图像-->>
+    <style>
+        img.top {
+            vertical-align: text-top;
+        }
 
+        img.bottom {
+            vertical-align: text-bottom;
+        }
+    </style>
+    <!--添加文本阴影-->
+    <style>
+        h1.shadow {
+            text-shadow: 20px 20px red;
+        }
+    </style>
 </head>
 
 <body>
@@ -67,7 +84,15 @@
     <p>i am a student,are you ok ?</p>
 
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <p>
+    <p class="wordsp">
+        文本方向朝左边，你瞧瞧，是不是哦
+        这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。
+        这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。
+        这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。
+        这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。
+        这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。
+    </p>
+    <p class="white">
         这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。
         这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。
         这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。
@@ -75,6 +100,12 @@
         这是一些文本。这是一些文本。这是一些文本。这是一些文本。这是一些文本。
     </p>
 
+
+    <p>一个默认<img src="images/women.png" alt="美女图片" height="50px" width="270px">对齐的图像</p>
+    <p>一个<img class="top" src="images/women.png" alt="美女图片" width="270px" height="50px" />text-top 对齐的图像</p>
+    <p>一个<img class="bottom" src="images/women.png" alt="美女图片" width="270px" height="50px" />text-bottom 对齐的图像</p>
+
+    <h1 class="shadow">text-shadow效果</h1>
 </body>
 
 </html>

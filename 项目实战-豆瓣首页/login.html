@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录/注册</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- 短信登陆/注册 密码登录 -->
+        <div class="login">
+            <!-- 登录方式切换 -->
+            <div class="swith-menu clearfix">
+                <span id="msglogin" class="left selected" onclick="switchLogin(this)">
+
+                    短信登录/注册
+                </span>
+                <span id="pwdlogin" class="right" onclick="switchLogin(this)">
+                    密码登录
+                </span>
+            </div>
+            <!-- 表单 -->
+            <form class="form">
+                <!-- 短信登录 -->
+                <div>
+                    <div class="form-item">
+                        <p class="txt">请仔细阅读 <a href="">豆瓣使用协议、豆瓣个人信息保护政策</a></p>
+                    </div>
+                    <div class="form-item">
+                        <input type="text" class="more-text-indent" placeholder="手机号">
+                        <div class="country-code">
+                            <div class="selected">
+                                +86
+                            </div>
+                            <div class="choose-area">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <input type="text" placeholder="验证码">
+                    </div>
+                </div>
+                <!-- 密码登录 -->
+                <div></div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        // 选中样式切换
+        function switchLogin(id) {
+            document.getElementById("msglogin").classList.remove("selected")
+            document.getElementById("pwdlogin").classList.remove("selected")
+            id.classList.add("selected")
+        }
+    </script>
+</body>
+
+</html>

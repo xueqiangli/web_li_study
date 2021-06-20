@@ -7,21 +7,34 @@ button{
     cursor: pointer;
 }
 
+.best-top{
+    height: 34px;
+    width: 0 auto;
+    background-color: #EDF4EC;
+    padding-top: 7px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.header .best-top a{
+    width: 102px;
+    height: 20px;
+    background: url(../img/logo_db.png) no-repeat left top/100%;
+    display: block;
+    margin-left: 13px;
+}
+
+
 /* 统一样式结束 */
 
 /* 页头开始 */
 .header {
-    height: 33px;
-    padding-top: 30px;
+    height: 96px;
+
 
 }
 
-/* 解决高度坍塌问题 */
-.clearfix::after {
-    content: "";
-    display: block;
-    clear: both;
-}
+
 
 /* 首页通用样式 */
 .container {
@@ -37,6 +50,9 @@ button{
     border: 2px solid;
 
 } */
+.header .logo{
+    margin-top: 4px;
+}
 .header .logo a {
     background: url(../img/sitename.png) no-repeat left top/100%;
     height: 24px;
@@ -56,15 +72,7 @@ button{
 
 }
 
-/* 左浮动 */
-.left {
-    float: left;
-}
 
-/* 右浮动 */
-.right {
-    float: right;
-}
 
 .header .search .txt::placeholder{
     color: #ccc;
@@ -95,9 +103,45 @@ button{
     color: #c3c3c3;
 }
 
+.header .menue{
+    margin-top: 6px;
+}
 .header .menue a{
     background: url(..//img/anony_nav_logo.png) left top/463px 20px;
     width: 40px;
     height: 20px;
-    display: block;
+    float: left;
+    margin-right: 14px;
+}
+
+.header .menue .menue-read-book{
+    background-position: 0,0;
+}
+
+.header .menue .menue-movice{
+    background-position: -60px,0;
+}
+.header .menue .menue-music{
+    background-position: -120px,0;
+}
+.header .menue .menue-city{
+    background-position: -300px,0;
+}
+.header .menue .menue-group{
+    background-position: -180px,0;
+}
+.header .menue .menue-read{
+    background: url(../img/read_home_nav.png) left top/40px 20px;
+    background-position: 0,0;
+}
+.header .menue .menue-fm{
+    background-position: -240px,0;
+}
+.header .menue .menue-time{
+    background: url(../img/shijian_home_nav.png) left top/40px 20px;
+    background-position: 0,0;
+    height: 21px;
+}
+.header .menue .menue-doupin{
+    background-position: -422px,0;
 }

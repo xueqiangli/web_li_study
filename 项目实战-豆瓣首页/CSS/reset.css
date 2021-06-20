@@ -9,3 +9,21 @@ button{
     background: initial;
     padding: 0;
 }
+
+body{
+    margin: 0;
+}
+
+form{
+    border:0;
+    margin:0;
+    padding:0;
+
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}

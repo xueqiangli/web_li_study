@@ -1,0 +1,94 @@
+@import"reset.css";
+@import"common.css";
+
+/* 统一设置超链接颜色 */
+a {
+    color: #41ac52;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    border: 1px solid #e4e6e5;
+    box-sizing: border-box;
+    border-radius: 3px;
+    height: 34px;
+    padding-left: 10px;
+    /*首行缩进 */
+    font-size: 13px;
+}
+
+/* 更多的缩进 */
+input[type="text"].more-text-indent {
+    padding-left: 61px;
+}
+
+.container .login .swith-menu {
+    border-bottom: 1px solid #ececec;
+    font-size: 13px;
+
+
+}
+
+.container .login .swith-menu span {
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: -1px;
+    line-height: 2;
+}
+
+.container .login .swith-menu span.selected {
+    font-weight: bold;
+    color: #333;
+    border-bottom: 1px solid #494949;
+}
+
+
+.container {
+    width: 300px;
+    height: 300px;
+    padding: 30px 10px 10px 10px;
+    color: #9b9b9b;
+
+
+}
+
+.container .login .form {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.container .login .form .form-item {
+    margin: 10px 0;
+    position: relative;
+}
+
+.container .login .form .form-item .txt {
+    font-size: 12px;
+}
+
+.container .login .form .form-item .country-code {
+    position: absolute;
+    width: 51px;
+    height: 26px;
+    left: 0;
+    top:4px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    border-right: 1px solid #e4e6e5;
+    cursor: pointer;
+}
+
+.container .login .form .form-item .country-code .choose-area{
+    /* 铺满整个视口，而且半透明 */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    left: 0;
+    top: 0;
+}

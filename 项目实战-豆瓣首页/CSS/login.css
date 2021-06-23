@@ -62,10 +62,25 @@ input[type="text"].more-text-indent {
 .container .login .form .form-item {
     margin: 10px 0;
     position: relative;
+    font-size: 13px;
 }
 
-.container .login .form .form-item .txt {
-    font-size: 12px;
+.container .login .form .form-item .ab-right{
+    position: absolute;
+    top: 7px;
+    right: 7px;
+}
+.container .login .form .form-item .btn{
+    width: 100%;
+    height: 34px;
+    font-size: 15px;
+}
+
+
+
+.container .login .form .form-item .right{
+    color: #41ac52;
+    
 }
 
 .container .login .form .form-item .country-code {
@@ -73,7 +88,7 @@ input[type="text"].more-text-indent {
     width: 51px;
     height: 26px;
     left: 0;
-    top:4px;
+    top: 4px;
     text-align: center;
     line-height: 26px;
     font-size: 15px;
@@ -83,7 +98,7 @@ input[type="text"].more-text-indent {
     cursor: pointer;
 }
 
-.container .login .form .form-item .country-code .choose-area{
+.container .login .form .form-item .country-code .choose-area {
     /* 铺满整个视口，而且半透明 */
     position: fixed;
     width: 100%;
@@ -91,4 +106,97 @@ input[type="text"].more-text-indent {
     background: rgba(255, 255, 255, 0.5);
     left: 0;
     top: 0;
+    z-index: 1;
+}
+
+.container .login .form .form-item .country-code .choose-area .center {
+    width: 285px;
+    height: 225px;
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: white;
+    overflow: hidden;
+    cursor: auto;
+}
+
+.container .login .form .form-item .country-code .choose-area .center .title {
+    background: #ebf5eb;
+    height: 42px;
+    line-height: 42px;
+    text-align: left;
+    padding-left: 10px;
+    color: #060;
+    font-weight: bold;
+    position: relative;
+}
+
+.container .login .form .form-item .country-code .choose-area .center ul{
+    height: 183px;
+    overflow: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.container .login .form .form-item .country-code .choose-area .center ul li{
+    height: 38px;
+    line-height: 38px;
+    text-align: left;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    margin-top: -1px;
+    cursor: pointer;
+}
+
+.container .login .form .form-item .country-code .choose-area .center ul li .right{
+    color: #aaa;
+    font-weight: normal;
+}
+.container .login .form .form-item .country-code .choose-area .center ul li.selected{
+    color: #42bd56;
+}
+
+.container .login .form .form-item .country-code .choose-area .center ul li.selected .right{
+    color: inherit;
+}
+
+.container .login .form .form-item .country-code .choose-area .center ul li .iconfont{
+    margin-left: 10px;
+}
+
+.container .login .form .form-item .country-code .choose-area .center .title .iconfont{
+    position:absolute;
+    right: 12px;
+    top: 0;
+    color: #b4b4b4;
+    cursor: pointer;
+}
+.container .login .form .bottom {
+    border-top: 1px solid #ddd;
+    height: 33px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+.container .login .form .bottom .msg{
+   font-size: 11px;
+   vertical-align: 2px;
+}
+.container .login .form .bottom .iconfont{
+    margin-left: 12px;
+}
+
+.container .login .form .bottom .iconfont.icon-iconwechat{
+    color: #34950E;
+   
+}
+
+.container .login .form .bottom .iconfont.icon-shejiaotubiao-06{
+    color: #EA5D5C;
 }

@@ -29,27 +29,193 @@
             <!-- 表单 -->
             <form class="form">
                 <!-- 短信登录 -->
-                <div>
+                <div id="msgloginui"  >
                     <div class="form-item">
                         <p class="txt">请仔细阅读 <a href="">豆瓣使用协议、豆瓣个人信息保护政策</a></p>
                     </div>
                     <div class="form-item">
                         <input type="text" class="more-text-indent" placeholder="手机号">
                         <div class="country-code">
-                            <div class="selected">
+                            <div id="countrycode" class="selected">
                                 +86
                             </div>
-                            <div class="choose-area">
+                            <div id="choosecountry" class="choose-area hidden">
+
+                                <div class="center">
+                                    <div class="title">
+                                        选择国际区号
+                                        <a id="close" class="iconfont icon-close"></a>
+                                    </div>
+                                    <ul>
+                                        <li class="clearfix selected ">
+                                            <span class="left">中国大陆</span>
+                                            <span class="iconfont icon-xuanzhong"></span>
+                                            <span class="right">+86</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span>
+                                            <span></span>
+                                            <span class="right">+2</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span>
+                                            <span></span>
+                                            <span class="right">+3</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span>
+                                            <span></span><span class="right">+4</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span>
+                                            <span></span><span class="right">+5</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+6</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+7</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+8</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+9</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+10</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+11</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+12</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+13</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+14</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+15</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+16</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+17</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+18</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+19</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+20</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+21</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+22</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+23</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+24</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+25</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+26</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+27</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+28</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+29</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+30</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+31</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+32</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+33</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+34</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+35</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+36</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+37</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+38</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+39</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+40</span>
+                                        </li>
+                                        <li class="clearfix"><span class="left">国家</span><span></span><span
+                                                class="right">+41</span>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
 
                             </div>
                         </div>
                     </div>
                     <div class="form-item">
                         <input type="text" placeholder="验证码">
+                        <a href="" class="ab-right">获取验证码</a>
+                    </div>
+                    <div class="form-item">
+                        <button class="btn" disabled>登录豆瓣</button>
+                    </div>
+                    <div class="form-item clearfix">
+                        <span class="right">收不到验证码</span>
                     </div>
                 </div>
                 <!-- 密码登录 -->
-                <div></div>
+                <div id="pwdloginui" class="hidden">
+                    <div class="form-item clearfix">
+                        <a class="right">找回密码</a>
+                    </div>
+                    <div class="form-item">
+                        <input type="text" placeholder="手机号/邮箱">
+                    </div>
+                    <div class="form-item">
+                        <input type="text" placeholder="密码">
+                    </div>
+                    <div class="form-item">
+                        <button disabled class="btn">登录豆瓣</button>
+                    </div>
+                    <div class="form-item clearfix">
+                        <span class="right">海外手机登录</span>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <span class="msg">第三方登录</span>
+                    <i class="iconfont icon-iconwechat"></i>
+                    <i class="iconfont icon-shejiaotubiao-06"></i>
+                </div>
             </form>
         </div>
     </div>
@@ -58,10 +224,53 @@
 
 
     <script>
-        // 选中样式切换
+
+        //关闭选择国家的弹框
+        document.getElementById("close").onclick = function () {
+            document.getElementById("choosecountry").style.display = "none"
+        }
+        //点击选择国家
+        document.getElementById("countrycode").onclick = function () {
+            document.getElementById("choosecountry").style.display = "block"
+        }
+
+        //为国家列表初始化点击事件
+        var myCollection = document.getElementsByTagName("li");
+        var i;
+        for (i = 0; i < myCollection.length; i++) {
+            myCollection[i].getElementsByTagName("span")[1].classList.add("iconfont")
+
+            myCollection[i].onclick = function () {
+                countrySelected(this);
+                document.getElementById("choosecountry").style.display = "none"
+                document.getElementById("countrycode").innerHTML = this.getElementsByTagName("span")[2].innerHTML
+            }
+        }
+        //国家选择样式
+        function countrySelected(obj) {
+
+            for (i = 0; i < myCollection.length; i++) {
+                myCollection[i].classList.remove("selected")
+                myCollection[i].getElementsByTagName("span")[1].classList.remove("icon-xuanzhong")
+            }
+
+            obj.getElementsByTagName("span")[1].classList.add("iconfont")
+            obj.getElementsByTagName("span")[1].classList.add("icon-xuanzhong")
+            obj.classList.add("selected")
+
+        }
+        // 登录方式 选中样式切换
         function switchLogin(id) {
             document.getElementById("msglogin").classList.remove("selected")
             document.getElementById("pwdlogin").classList.remove("selected")
+            document.getElementById("msgloginui").style.display="none"
+            document.getElementById("pwdloginui").style.display="none"
+           
+            if(id.id=="msglogin"){
+                document.getElementById("msgloginui").style.display="block"
+            }else{
+                document.getElementById("pwdloginui").style.display="block"
+            }
             id.classList.add("selected")
         }
     </script>

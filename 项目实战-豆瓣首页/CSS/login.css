@@ -31,7 +31,7 @@ input[type="text"].more-text-indent {
 }
 
 .container .login .swith-menu span {
-    width: 150px;
+    width: 50%;
     text-align: center;
     cursor: pointer;
     margin-bottom: -1px;
@@ -50,7 +50,8 @@ input[type="text"].more-text-indent {
     height: 300px;
     padding: 30px 10px 10px 10px;
     color: #9b9b9b;
-
+    box-sizing: border-box;
+    position: relative;
 
 }
 
@@ -199,4 +200,47 @@ input[type="text"].more-text-indent {
 
 .container .login .form .bottom .iconfont.icon-shejiaotubiao-06{
     color: #EA5D5C;
+}
+
+.container .qrcode{
+    font-size: 13px;
+}
+
+.container .qrcode .title{
+    color: #333;
+    border-bottom: 1px solid #ececec;
+    
+}
+.container .qrcode .code img{
+    width: 170px;
+    height: 170px;
+    
+}
+
+.container .qrcode .code{
+    text-align: center;
+    font-size: 0;
+    margin: 20px 0;
+}
+.container .qrcode .tip{
+    width: 183px;
+    height: 25px;
+    line-height: 25px;
+    background: rgb(0, 0, 0,0.08);
+    text-align: center;
+    color: #494949;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+.container .change .iconqrcode{
+    width: 30px;
+    height: 30px;
+    display: block;
+    background: url("../img/switchcode-off.png");
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 10px;
+    margin-top: 10px;
 }

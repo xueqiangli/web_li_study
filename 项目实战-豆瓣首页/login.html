@@ -15,7 +15,7 @@
 <body>
     <div class="container">
         <!-- 短信登陆/注册 密码登录 -->
-        <div class="login">
+        <div class="login " id="login">
             <!-- 登录方式切换 -->
             <div class="swith-menu clearfix">
                 <span id="msglogin" class="left selected" onclick="switchLogin(this)">
@@ -29,7 +29,7 @@
             <!-- 表单 -->
             <form class="form">
                 <!-- 短信登录 -->
-                <div id="msgloginui"  >
+                <div id="msgloginui">
                     <div class="form-item">
                         <p class="txt">请仔细阅读 <a href="">豆瓣使用协议、豆瓣个人信息保护政策</a></p>
                     </div>
@@ -218,12 +218,41 @@
                 </div>
             </form>
         </div>
+        <div class="qrcode hidden" id="qrcode">
+            <div class="title">
+                二维码登录
+            </div>
+            <div class="code">
+                <img src="img/qrlogin_code.png">
+            </div>
+            <div class="tip">
+                请打开豆瓣客户端扫一扫
+            </div>
+        </div>
+        <div class="change" id="changlogin">
+            <i class="iconqrcode" id="iconqr"></i>
+        </div>
     </div>
 
 
 
 
     <script>
+
+        //二维码登录切换
+        var isqcode = false
+        document.getElementById("changlogin").onclick = function () {
+            isqcode = !isqcode
+            if (isqcode) {
+                document.getElementById("iconqr").style.backgroundImage = "url(img/switchcode-off.png)";
+                document.getElementById("qrcode").style.display = "block";
+                document.getElementById("login").style.display = "none";
+            } else {
+                document.getElementById("qrcode").style.display = "none";
+                document.getElementById("login").style.display = "block";
+                document.getElementById("iconqr").style.backgroundImage="url(img/switchcode-on.png)";
+            }
+        }
 
         //关闭选择国家的弹框
         document.getElementById("close").onclick = function () {
@@ -263,13 +292,13 @@
         function switchLogin(id) {
             document.getElementById("msglogin").classList.remove("selected")
             document.getElementById("pwdlogin").classList.remove("selected")
-            document.getElementById("msgloginui").style.display="none"
-            document.getElementById("pwdloginui").style.display="none"
-           
-            if(id.id=="msglogin"){
-                document.getElementById("msgloginui").style.display="block"
-            }else{
-                document.getElementById("pwdloginui").style.display="block"
+            document.getElementById("msgloginui").style.display = "none"
+            document.getElementById("pwdloginui").style.display = "none"
+
+            if (id.id == "msglogin") {
+                document.getElementById("msgloginui").style.display = "block"
+            } else {
+                document.getElementById("pwdloginui").style.display = "block"
             }
             id.classList.add("selected")
         }

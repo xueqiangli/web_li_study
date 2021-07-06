@@ -232,6 +232,13 @@
         <div class="change" id="changlogin">
             <i class="iconqrcode" id="iconqr"></i>
         </div>
+
+
+        <div class="arrow hidden">
+            <span class="pointer" id="scanlogin">扫码登录</span>
+            <span class="stye"></span>
+        </div>
+        
     </div>
 
 
@@ -244,13 +251,16 @@
         document.getElementById("changlogin").onclick = function () {
             isqcode = !isqcode
             if (isqcode) {
-                document.getElementById("iconqr").style.backgroundImage = "url(img/switchcode-off.png)";
+                document.getElementById("scanlogin").innerText="短信登录/注册"
+                document.getElementById("iconqr").style.backgroundImage = "url(img/switchcode-on.png)";
                 document.getElementById("qrcode").style.display = "block";
                 document.getElementById("login").style.display = "none";
             } else {
+                document.getElementById("scanlogin").innerText="扫码登录"
                 document.getElementById("qrcode").style.display = "none";
                 document.getElementById("login").style.display = "block";
-                document.getElementById("iconqr").style.backgroundImage="url(img/switchcode-on.png)";
+                document.getElementById("iconqr").style.backgroundImage = "url(img/switchcode-off.png)";
+
             }
         }
 
